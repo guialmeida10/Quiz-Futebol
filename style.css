@@ -1,0 +1,235 @@
+body {
+  background-color: #000; /* fallback de cor */
+  background-image: url("./imgs/o1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  font-family: "Gabarito", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    min-height: 100vh;
+  }
+
+  .logo img {
+    width: 70%; /* Logo menor em telas pequenas */
+  }
+
+  .conteudo-jogo {
+    flex-direction: column;
+    height: auto;
+    margin: 10px 0;
+    padding: 15px;
+  }
+
+  .questionario {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .conteudo {
+    gap: 15px;
+  }
+
+  .botao-resposta {
+    height: 2.2rem;
+    font-size: 0.95rem;
+  }
+
+  .fim span {
+    font-size: 1rem;
+  }
+}
+
+
+.logo {
+  text-align: end;
+}
+
+.logo img {
+  width: 20%;
+}
+
+/* Caixa principal do jogo */
+.conteudo-jogo {
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 40px #fd1504;
+  margin: 0 auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 900px; 
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+
+
+.conteudo-jogo:hover {
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 70px #01585d;
+}
+
+/* Títulos e textos */
+
+p {
+  color: white;
+}
+
+/* Estrutura do questionário */
+.questionario {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 90%;
+  max-width: 90%;
+}
+
+/* Área de conteúdo */
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  gap: 20px;
+}
+
+/* Estilo da pergunta */
+.pergunta {
+  font-weight: 650;
+  color: white;
+}
+
+/* Progresso da pergunta */
+.progresso {
+  text-align: end;
+  font-size: small;
+  font-weight: 500;
+  color: white;
+}
+
+/* Área das respostas */
+.respostas {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Botões de resposta */
+.botao-resposta {
+  width: 100%;
+  height: clamp(2.5rem, 5vw, 4rem); /* Cresce em telas menores */
+  text-align: start;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #01585d;
+  color: white;
+}
+
+
+.botao-resposta:hover {
+  background: #19caca;
+  font-weight: 600;
+}
+
+/* Tela de fim do jogo */
+.fim {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.fim span {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+}
+
+.titulo {
+  width: 100%;
+  text-align: center;
+  color: #f3e9e9;
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+
+  text-shadow: 0 0 5px #ff4d4d, 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 40px #ff0000;
+  animation: brilho 2s infinite alternate;
+}
+
+@keyframes brilho {
+  0% {
+    text-shadow: 0 0 5px #ff4d4d, 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 40px #ff0000;
+  }
+  100% {
+    text-shadow: 0 0 10px #ff9999, 0 0 20px #ff9999, 0 0 30px #ff4d4d, 0 0 60px #ff1a1a;
+  }
+}
+#social-links {
+  justify-content: center;
+  display: flex;
+  gap: 32px;
+  
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  color: white;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+#footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+#footer a{
+  color: white;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Deixa a lista de erros responsiva */
+.fim ul {
+  width: 100%;
+  padding: 0 10px;
+  list-style-position: inside;
+  word-break: break-word;
+  text-align: center;
+}
+
+/* Previne botões estourando */
+.botao-resposta {
+  white-space: normal;
+  word-break: break-word;
+}
